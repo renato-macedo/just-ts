@@ -1,0 +1,26 @@
+{
+  "name": "just-ts",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node lib/index.js"
+  },
+  "bin": "lib/index.js",
+  "files": [
+    "lib/**/*"
+  ],
+  "keywords": [
+    "typescript",
+    "generator",
+    "project",
+    "npx"
+  ],
+  "author": "Renato Macêdo",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^15.0.0",
+    "typescript": "^4.2.4"
+  },
+  "description": "Typescript Project generator so simple you don't even need it"
+}
