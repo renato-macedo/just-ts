@@ -12,12 +12,20 @@ async function createProject() {
 
   console.log("Creating TypeScript project ⏳");
   await mkdir(path, { recursive: true });
-  execSync("npx gitignore node", { cwd: path });
-  execSync("npm init -y", { cwd: path });
-  execSync("npm i -D typescript", { cwd: path });
-  execSync('npx tsc --init -t "esnext" --outDir "./build" --rootDir "./src"', {
-    cwd: path,
-  });
+  let result = execSync("npx gitignore node", { cwd: path }).toString();
+  console.log(result);
+  result = execSync("npm init -y", { cwd: path }).toString();
+  console.log(result);
+  result = execSync("npm i -D typescript", { cwd: path }).toString();
+  console.log(result);
+  result = execSync(
+    'npx tsc --init -t "esnext" --outDir "./build" --rootDir "./src"',
+    {
+      cwd: path,
+    }
+  ).toString();
+
+  console.log(result);
 
   await mkdir(join(path, "src"), { recursive: true });
   await writeFile(join(path, "src", "index.ts"), `console.log("Hello World");`);
