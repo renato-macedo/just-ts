@@ -23,5 +23,9 @@
     "@types/node": "^15.0.0",
     "typescript": "^4.2.4"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renato-macedo/just-ts.git"
+  },
   "description": "Typescript Project generator so simple you don't even need it"
 }
